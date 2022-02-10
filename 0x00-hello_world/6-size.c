@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * main - this program prints the sizo of diferent types
  *
  * Return: 0
