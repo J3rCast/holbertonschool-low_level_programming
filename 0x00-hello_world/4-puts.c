@@ -1,6 +1,10 @@
-#include<stdio.h>
-
-int main
+#include <stdio.h>
+/**
+ * main - print in the screen
+ *
+ * Return: 0
+ */
+int main(void)
 {
 	char str1[] = "\"Programming is like building a multilingual puzzle";
 
