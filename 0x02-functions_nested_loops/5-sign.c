@@ -7,6 +7,6 @@
 
 int main(void)
 {
-	print_alphabet_x10();
+	int print_sign(int n);
 	return (0);
 }
