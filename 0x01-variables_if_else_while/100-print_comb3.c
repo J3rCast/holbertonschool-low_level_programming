@@ -14,10 +14,16 @@ int main(void)
 	{
 		for (secChar = '1'; secChar <= '9'; secChar++)
 		{
-			putchar(firstChar);
-			putchar(secChar);
-			putchar(',');
-			putchar(' ');
+			if (firstChar < secChar)
+			{
+				putchar(firstChar);
+				putchar(secChar);
+				if (firstChar < '8')
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
 	putchar('\n');
