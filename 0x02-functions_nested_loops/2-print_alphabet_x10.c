@@ -1,4 +1,6 @@
 #include "main.h"
+#include <unistd.h>
+
 /**
  * print_alphabet_x10 - this program prints laphabet in ten lines
  *
