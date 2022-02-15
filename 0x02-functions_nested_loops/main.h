@@ -18,10 +18,10 @@ void print_alphabet(void)
 
 	while (alfa <= 'z')
 	{
-		write(1, &alfa, 1);
+		_putchar(alfa);
 		alfa++;
 	}
-	write(1, "\n", 1);
+	_putchar('\n');
 }
 /*this function print alphabet in ten lines*/
 /*void print_alphabet_x10(void)
