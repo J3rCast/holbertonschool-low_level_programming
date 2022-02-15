@@ -7,7 +7,7 @@
  *
  * Return: minutes
  */
-void main(void)
+int main(void)
 {
 	int n = 0;
 	int sum = 0;
@@ -17,7 +17,8 @@ void main(void)
 		if (n % 3 == 0 || n % 5 == 0)
 		{
 			sum += n;
-			printf("%d\n", sum);
+			return (sum);
+			printf("\n");
 		}
 		n++;
 	}
