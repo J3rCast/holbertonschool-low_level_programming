@@ -29,7 +29,7 @@ int print_sign(int n);
 int _abs(int num);
 
 /*REMINDER, DOESNT WORK*/
-int print_last_digit(int num);
+int print_last_digit(int);
 /*{
 	int lastDigit;
 	lastDigit = num % 10;
