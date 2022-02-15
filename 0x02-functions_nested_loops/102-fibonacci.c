@@ -17,7 +17,7 @@ int main(void)
 	for (n = 0; n <= 47; n++)
 	{
 		printf("%ld", nextTerm);
-		if (n < 50)
+		if (n < 47)
 		{
 			printf(", ");
 		}
