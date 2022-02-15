@@ -1,12 +1,24 @@
 #include "main.h"
 /**
- * main - this program prints laphabet follow by a new line
+ * main - this program prints find out if character is aletter
  *
- * Return: 0
+ * Return: alpha or not
  */
-
-int main(void)
+int _isalpha(int c)
 {
-	int _isalpha(int c);
-	return (0);
+	int alpha;
+
+	if (c >= 'A' && c <= 'Z')
+	{
+		alpha = 1;
+	}
+	else if (c >= 'a' && c <= 'z')
+	{
+		alpha = 1;
+	}
+	else
+	{
+		alpha = 0;
+	}
+	return (alpha);
 }
