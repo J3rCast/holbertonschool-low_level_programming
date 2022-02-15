@@ -16,8 +16,8 @@ void print_alphabet(void);
 void print_alphabet_x10(void);
 
 /*this function identifies if a letter is lowercase or not*/
-/*int _islower(int c)
-{
+int _islower(int c);
+/*{
 	int num;
 	if (c >= 'a' && c <= 'z')
 	{
