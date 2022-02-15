@@ -114,6 +114,7 @@ int print_last_digit(int num)
 	int lastDigit;
 	lastDigit = num % 10;
 	_putchar(lastDigit);
+	return(0);
 }
 /*this function prints every minute of the day of Jack Bauer*/
 void jack_bauer(void)
