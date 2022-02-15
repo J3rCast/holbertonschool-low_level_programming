@@ -1,3 +1,5 @@
+#include <main.h>
+#include <unistd.h>
 /**
  * main - this program prints putchar using putchar function
  *
@@ -6,6 +8,10 @@
 
 int main(void)
 {
+		int _putchar(char c)
+	{
+		return (write(1, &c, 1));
+	}
 	_putchar('_');
 	_putchar('p');
 	_putchar('u');
