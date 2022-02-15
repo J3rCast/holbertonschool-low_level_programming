@@ -22,6 +22,6 @@ int main(void)
 		}
 		n++;
 	}
-	return (sum);
 	printf("%d\n", sum);
+	return (sum);
 }
