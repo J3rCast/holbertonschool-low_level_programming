@@ -17,21 +17,10 @@ void print_alphabet_x10(void);
 
 /*this function identifies if a letter is lowercase or not*/
 int _islower(int c);
-/*{
-	int num;
-	if (c >= 'a' && c <= 'z')
-	{
-		num = 1;
-	}
-	else
-	{
-		num = 0;
-	}
-	return num;
-}*/
+
 /*this function identifies if the character is alpha or not*/
-/*int _isalpha(int c)
-{
+int _isalpha(int c);
+/*{
 	int alpha;
 	if (c >= 'A' && c <= 'Z')
 	{
