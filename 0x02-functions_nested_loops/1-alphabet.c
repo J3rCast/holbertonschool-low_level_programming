@@ -1,6 +1,6 @@
 #include <unistd.h>
 /**
- * main - this program prints alphabet
+ * print_alphabet - this program prints alphabet
  *
  * Return: 0
  */
