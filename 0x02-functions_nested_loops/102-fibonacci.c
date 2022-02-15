@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	int n = 0;
-	int term1 = 1;
-	int term2 = 2;
-	int nextTerm = term1 + term2;
+	long n = 0;
+	long term1 = 1;
+	long term2 = 2;
+	long nextTerm = term1 + term2;
 
 	printf("%d, %d, ", term1, term2);
 
