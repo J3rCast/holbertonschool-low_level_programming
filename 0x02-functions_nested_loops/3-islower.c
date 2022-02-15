@@ -2,6 +2,8 @@
 /**
  * _islower - this program finds out if a letter is lowercase or not
  *
+ * @c: letter value
+ *
  * Return: num
  */
 
