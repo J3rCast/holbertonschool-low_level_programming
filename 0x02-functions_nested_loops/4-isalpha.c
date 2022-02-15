@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * main - this program prints find out if character is aletter
+ * _isalpha - this program prints find out if character is aletter
+ *
+ * @c: character value
  *
  * Return: alpha or not
  */
