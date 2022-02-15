@@ -1,11 +1,12 @@
 #include "main.h"
+
 /**
  * jack_bauer - this program prints laphabet follow by a new line
  *
  * Return: minutes
  */
 
-void jack_bauer(void)
+int main(void)
 {
 	char a = '0';
 	char b = '0';
@@ -14,26 +15,53 @@ void jack_bauer(void)
 
 	while (a <= '2')
 	{
-		while (b <= '3')
+		if (a < '2')
 		{
-			while (c <= '5')
+			while (b <= '9')
 			{
-				while (d <= '9')
+				while (c <= '5')
 				{
-					_putchar(a);
-					_putchar(b);
-					_putchar(':');
-					_putchar(c);
-					_putchar(d);
-					_putchar('\n');
-					d++;
+					while (d <= '9')
+					{
+						_putchar(a);
+						_putchar(b);
+						_putchar(':');
+						_putchar(c);
+						_putchar(d);
+						_putchar('\n');
+						d++;
+					}
+				d = '0';
+				c++;
 				}
+			c = '0';
 			d = '0';
-			c++;
+			b++;
 			}
-		c = '0';
-		d = '0';
-		b++;
+		}
+		else
+		{
+			while (b <= '9')
+				{
+					while (c <= '5')
+					{
+						while (d <= '9')
+						{
+							_putchar(a);
+							_putchar(b);
+							_putchar(':');
+							_putchar(c);
+							_putchar(d);
+							_putchar('\n');
+							d++;
+						}
+					d = '0';
+					c++;
+					}
+				c = '0';
+				d = '0';
+				b++;
+				}
 		}
 	b = '0';
 	d = '0';
