@@ -5,7 +5,7 @@
  *
  * Return: sum
  */
-void main(void)
+int main(void)
 {
 	int n = 0;
 	int sum = 0;
