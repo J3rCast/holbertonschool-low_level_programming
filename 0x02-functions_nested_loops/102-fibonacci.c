@@ -14,7 +14,7 @@ int main(void)
 
 	printf("%ld, %ld, ", term1, term2);
 
-	for (n = 0; n <= 50; n++)
+	for (n = 0; n <= 47; n++)
 	{
 		printf("%ld", nextTerm);
 		if (n < 50)
