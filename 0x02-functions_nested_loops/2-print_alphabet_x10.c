@@ -22,5 +22,4 @@ void print_alphabet_x10(void)
 		n++;
 		alfa = 'a';
 	}
-	write(1, "\n", 1);
 }
