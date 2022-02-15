@@ -1,12 +1,22 @@
 #include "main.h"
 /**
- * main - this program prints laphabet follow by a new line
+ * _abs - this program prints laphabet follow by a new line
  *
- * Return: 0
+ * @num: character value
+ *
+ * Return: num
  */
 
-int main(void)
+int _abs(int num)
 {
-	int _abs(int);
-	return (0);
+	if (num < 0)
+	{
+		num = num * -1;
+		return (num);
+	}
+	else
+	{
+		num = num * 1;
+		return (num);
+	}
 }
