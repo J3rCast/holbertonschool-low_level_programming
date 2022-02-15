@@ -44,7 +44,7 @@ void jack_bauer(void)
 	{
 		if (a < '2')
 		{
-			void whileloop(char '9');
+			void whileloop('9');
 		}
 		else
 		{
