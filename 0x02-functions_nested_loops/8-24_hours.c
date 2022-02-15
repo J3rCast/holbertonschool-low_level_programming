@@ -14,7 +14,7 @@ void jack_bauer(void)
 
 	while (a <= '2')
 	{
-		if (a = '2')
+		if (a == '2')
 		{
 			num = '3';
 		}
