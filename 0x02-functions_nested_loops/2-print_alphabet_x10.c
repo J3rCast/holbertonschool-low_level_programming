@@ -6,7 +6,7 @@
  */
 
 /*void print_alphabet_x10(void)*/
-void main(void)
+void print_alphabet_x10(void)
 {
 	char alfa = 'a';
 	int n = 1;
