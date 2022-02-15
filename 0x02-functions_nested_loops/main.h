@@ -7,22 +7,19 @@
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+int _putchar(char c);
 /*this function prints alphabet*/
-void print_alphabet(void)
-{
+void print_alphabet(void);
+/*{
 	char alfa = 'a';
 
 	while (alfa <= 'z')
 	{
-		write(1, &alfa, 1);
+		_putchar(alfa);
 		alfa++;
 	}
-	write(1, "\n", 1);
-}
+	_putchar('\n');
+}*/
 /*this function print alphabet in ten lines*/
 /*void print_alphabet_x10(void)
 {
