@@ -7,6 +7,10 @@
  */
 void whileloop(char num)
 {
+	char a;
+	char b;
+	char c;
+	char d;
 	while (b <= num)
 			{
 				while (c <= '5')
