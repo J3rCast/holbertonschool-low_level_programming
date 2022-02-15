@@ -12,7 +12,7 @@ int main(void)
 	long term2 = 2;
 	long nextTerm = term1 + term2;
 
-	printf("%d, %d, ", term1, term2);
+	printf("%ld, %ld, ", term1, term2);
 
 	for (n = 0; n <= 50; n++)
 	{
