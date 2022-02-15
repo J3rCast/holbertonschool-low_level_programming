@@ -1,11 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_to_98 - thi program prints every minute
+ * main - this program prints every minute
  *
- * @n: integer value
- *
- * Return: minutes
+ * Return: sum
  */
 int main(void)
 {
@@ -14,12 +12,15 @@ int main(void)
 
 	while (n < 1024)
 	{
-		if (n % 3 == 0 || n % 5 == 0)
+		if (n % 3 == 0)
 		{
 			sum += n;
-			printf("%d\n", sum);
+		}
+		else if (n % 5 == 0)
+		{
+			sum += n;
 		}
 		n++;
 	}
-	return (0);
+	return (sum);
 }
