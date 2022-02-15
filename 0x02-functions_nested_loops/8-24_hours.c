@@ -39,12 +39,13 @@ void jack_bauer(void)
 	char b = '0';
 	char c = '0';
 	char d = '0';
+	char e = '9';
 
 	while (a <= '2')
 	{
 		if (a < '2')
 		{
-			void whileloop(char 9);
+			void whileloop(char e);
 		}
 		else
 		{
