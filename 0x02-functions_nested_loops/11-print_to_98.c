@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * add - thi program prints every minute
+ * print_to_98 - thi program prints every minute
  *
- * @n: first value
- * @m: second value
+ * @n: integer value
  *
  * Return: minutes
  */
@@ -14,7 +13,7 @@ void print_to_98(int n)
 	{
 		while(n <= 98)
 		{
-			printf("%d\, ", n);
+			printf("%d\n, ", n);
 			n++;
 		}
 	}
@@ -22,7 +21,7 @@ void print_to_98(int n)
 	{
 		while(n >= 98)
 		{
-			printf("%d\, ", n);
+			printf("%d\n, ", n);
 			n--;
 		}
 	}
@@ -30,4 +29,5 @@ void print_to_98(int n)
 	{
 		printf("%d\n", n);
 	}
+	return (0);
 }
