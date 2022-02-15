@@ -1,12 +1,26 @@
 #include "main.h"
 /**
- * main - this program prints laphabet follow by a new line
+ * aprint_sign - this program prints the sign of the character
+ *
+ * @n: character value
  *
  * Return: 0
  */
-
-int main(void)
+int print_sign(int n)
 {
-	int print_sign(int n);
-	return (0);
+	if (n < 0)
+	{
+		_putchar('-');
+		return(-1);
+	}
+	else if (n > 0)
+	{
+		_putchar('+');
+		return(1);
+	}
+	else
+	{
+		_putchar('0');
+		return(0);
+	}
 }
