@@ -10,15 +10,11 @@ void jack_bauer(void)
 	char b = '0';
 	char c = '0';
 	char d = '0';
-	char num;
+	char num = '9';
 
 	while (a <= '2')
 	{
-		if (a < '2')
-		{
-			num = '9';
-		}
-		else
+		if (a = '2')
 		{
 			num = '3';
 		}
