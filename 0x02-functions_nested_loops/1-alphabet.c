@@ -5,7 +5,7 @@
  * Return: 0
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char alfa = 'a';
 
@@ -15,6 +15,4 @@ int main(void)
 		alfa++;
 	}
 	write(1, "\n", 1);
-	
-	return(0);
 }
