@@ -16,7 +16,7 @@ int main(void)
 
 	for (n = 0; n <= 50; n++)
 	{
-		printf("%d", nextTerm);
+		printf("%ld", nextTerm);
 		if (n < 50)
 		{
 			printf(", ");
