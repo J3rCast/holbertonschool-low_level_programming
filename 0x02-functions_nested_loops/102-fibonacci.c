@@ -14,7 +14,7 @@ int main(void)
 	while (n <= 50)
 	{
 		sum += m;
-		printf("%d, " sum);
+		printf("%d, ", sum);
 		m++;
 		n++;
 	}
