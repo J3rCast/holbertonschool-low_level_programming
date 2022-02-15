@@ -8,15 +8,22 @@
 int main(void)
 {
 	int n = 0;
-	int m = 1;
-	int sum = 0;
+	int term1 = 1;
+	int term2 = 2;
+	int nextTerm = term1 + term2;
 
-	while (n <= 50)
+	printf("%d, %d, ", term1, term2);
+
+	for (n = 0; n <= 50; n++)
 	{
-		sum += m;
-		printf("%d, ", sum);
-		m++;
-		n++;
+		printf("%d", nextTerm);
+		if (n < 50)
+		{
+			printf(", ");
+		}
+		term1 = term2;
+		term2 = nextTerm;
+		nextTerm = term1 + term2;
 	}
 	printf("\n");
 	return (0);
