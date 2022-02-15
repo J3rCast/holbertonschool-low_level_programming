@@ -16,6 +16,6 @@ int main(void)
 		alfa++;
 	}
 	_putchar('\n');
-	}
+	
 	return(0);
 }
