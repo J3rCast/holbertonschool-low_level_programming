@@ -1,5 +1,6 @@
 #include <unistd.h>
 
+
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -59,8 +60,8 @@ int _abs(int num);
 /*this fuction prints the last digit of a number*/
 
 /*REMINDER, DOESNT WORK*/
-/*int print_last_digit(int num)
-{
+int print_last_digit(int num);
+/*{
 	int lastDigit;
 	lastDigit = num % 10;
 	_putchar(lastDigit);
