@@ -5,8 +5,16 @@
  * Return: 0
  */
 
-int main(void)
+int _islower(int c)
 {
-	int _islower(int c);
-	return (0);
+	int num;
+	if (c >= 'a' && c <= 'z')
+	{
+		num = 1;
+	}
+	else
+	{
+		num = 0;
+	}
+	return num;
 }
