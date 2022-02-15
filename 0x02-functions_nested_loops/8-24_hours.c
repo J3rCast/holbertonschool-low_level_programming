@@ -5,10 +5,6 @@
  *
  * Return: minutes
  */
-void whileloop(char num)
-{
-		}
-}
 void jack_bauer(void)
 {
 	char a = '0';
