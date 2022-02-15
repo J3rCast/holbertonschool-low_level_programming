@@ -20,25 +20,10 @@ int _islower(int c);
 
 /*this function identifies if the character is alpha or not*/
 int _isalpha(int c);
-/*{
-	int alpha;
-	if (c >= 'A' && c <= 'Z')
-	{
-		alpha = 1;
-	}
-	else if (c >= 'a' && c <= 'z')
-	{
-		alpha = 1;
-	}
-	else
-	{
-		alpha = 0;
-	}
-	return alpha;
-}*/
+
 /*this funtion prints the sign of a number*/
-/*int print_sign(int n)
-{
+int print_sign(int n);
+/*{
 	if (n < 0)
 	{
 		_putchar('-');
@@ -55,9 +40,10 @@ int _isalpha(int c);
 		return(0);
 	}
 }*/
+
 /*this fuctio coputes the absolute value of an integer*/
-/*int _abs(int num)
-{
+int _abs(int num);
+/*{
 	if (num < 0)
 	{
 		num = num * -1;
@@ -69,6 +55,7 @@ int _isalpha(int c);
 		return(num);
 	}
 }*/
+
 /*this fuction prints the last digit of a number*/
 
 /*REMINDER, DOESNT WORK*/
@@ -79,9 +66,10 @@ int _isalpha(int c);
 	_putchar(lastDigit);
 	return(0);
 }*/
+
 /*this function prints every minute of the day of Jack Bauer*/
-/*void jack_bauer(void)
-{
+void jack_bauer(void);
+/*{
 	char a = '0';
 	char b = '0';
 	char c = '0';
