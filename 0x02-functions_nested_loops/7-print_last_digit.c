@@ -11,6 +11,5 @@ int print_last_digit(int num)
 {
 	int lastDigit;
 	lastDigit = num % 10;
-	write(1, &lastDigit, 1);
 	return (1 * lastDigit);
 }
