@@ -12,7 +12,7 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /*this function prints alphabet*/
-void print_alphabet(void)
+/*void print_alphabet(void)
 {
 	char alfa = 'a';
 
@@ -22,9 +22,9 @@ void print_alphabet(void)
 		alfa++;
 	}
 	_putchar('\n');
-}
+}*/
 /*this function print alphabet in ten lines*/
-void print_alphabet_x10(void)
+/*void print_alphabet_x10(void)
 {
 	int n = 1;
 
@@ -40,9 +40,9 @@ void print_alphabet_x10(void)
 	_putchar('\n');
 	n++;
 	}
-}
+}*/
 /*this function identifies if a letter is lowercase or not*/
-int _islower(int c)
+/*int _islower(int c)
 {
 	int num;
 	if (c >= 'a' && c <= 'z')
@@ -54,9 +54,9 @@ int _islower(int c)
 		num = 0;
 	}
 	return num;
-}
+}*/
 /*this function identifies if the character is alpha or not*/
-int _isalpha(int c)
+/*int _isalpha(int c)
 {
 	int alpha;
 	if (c >= 'A' && c <= 'Z')
@@ -72,9 +72,9 @@ int _isalpha(int c)
 		alpha = 0;
 	}
 	return alpha;
-}
+}*/
 /*this funtion prints the sign of a number*/
-int print_sign(int n)
+/*int print_sign(int n)
 {
 	if (n < 0)
 	{
@@ -91,9 +91,9 @@ int print_sign(int n)
 		_putchar('0');
 		return(0);
 	}
-}
+}*/
 /*this fuctio coputes the absolute value of an integer*/
-int _abs(int num)
+/*int _abs(int num)
 {
 	if (num < 0)
 	{
@@ -105,19 +105,19 @@ int _abs(int num)
 		num = num * 1;
 		return(num);
 	}
-}
+}*/
 /*this fuction prints the last digit of a number*/
 
 /*REMINDER, DOESNT WORK*/
-int print_last_digit(int num)
+/*int print_last_digit(int num)
 {
 	int lastDigit;
 	lastDigit = num % 10;
 	_putchar(lastDigit);
 	return(0);
-}
+}*/
 /*this function prints every minute of the day of Jack Bauer*/
-void jack_bauer(void)
+/*void jack_bauer(void)
 {
 	char a = '0';
 	char b = '0';
@@ -151,4 +151,4 @@ void jack_bauer(void)
 	d = '0';
 	a++;
 	}
-}
+}*/
