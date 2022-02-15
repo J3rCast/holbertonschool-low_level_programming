@@ -16,6 +16,6 @@ int print_last_digit(int n)
 	{
 		last_digit *= -1;
 	}
-	m = last_digit *= 11
+	m = last_digit *= 11;
 	return(m);
 }
