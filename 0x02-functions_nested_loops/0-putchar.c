@@ -1,4 +1,3 @@
-#include "main.h"
 /**
  * main - this program prints putchar using putchar function
  *
