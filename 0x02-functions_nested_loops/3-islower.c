@@ -1,14 +1,13 @@
 #include "main.h"
 /**
- * main - this program prints laphabet follow by a new line
+ * _islower - this program finds out if a letter is lowercase or not
  *
- * Return: 0
+ * Return: num
  */
-
 int _islower(int c)
 {
 	int num;
-	if(c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		num = 1;
 	}
