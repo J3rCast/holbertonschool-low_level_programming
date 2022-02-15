@@ -8,36 +8,13 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(char c);
+
 /*this function prints alphabet*/
 void print_alphabet(void);
-/*{
-	char alfa = 'a';
 
-	while (alfa <= 'z')
-	{
-		_putchar(alfa);
-		alfa++;
-	}
-	_putchar('\n');
-}*/
 /*this function print alphabet in ten lines*/
-/*void print_alphabet_x10(void)
-{
-	int n = 1;
+void print_alphabet_x10(void);
 
-	while (n <= 10)
-	{
-		char alfa = 'a';
-
-		while (alfa <= 'z')
-		{
-			_putchar(alfa);
-			alfa++;
-		}
-	_putchar('\n');
-	n++;
-	}
-}*/
 /*this function identifies if a letter is lowercase or not*/
 /*int _islower(int c)
 {

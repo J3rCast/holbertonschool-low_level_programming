@@ -1,12 +1,24 @@
 #include "main.h"
 /**
- * main - this program prints laphabet follow by a new line
+ * print_alphabet_x10 - this program prints laphabet in ten lines
  *
  * Return: 0
  */
 
-int main(void)
+void print_alphabet_x10(void)
 {
-	print_alphabet_x10();
-	return (0);
+	int n = 1;
+
+	while (n <= 10)
+	{
+		char alfa = 'a';
+
+		while (alfa <= 'z')
+		{
+			_putchar(alfa);
+			alfa++;
+		}
+	_putchar('\n');
+	n++;
+	}
 }
