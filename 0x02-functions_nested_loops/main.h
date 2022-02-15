@@ -12,7 +12,7 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /*this function prints alphabet*/
-/*void print_alphabet(void)
+void print_alphabet(void)
 {
 	char alfa = 'a';
 
@@ -22,7 +22,7 @@ int _putchar(char c)
 		alfa++;
 	}
 	write(1, "\n", 1);
-}*/
+}
 /*this function print alphabet in ten lines*/
 /*void print_alphabet_x10(void)
 {
