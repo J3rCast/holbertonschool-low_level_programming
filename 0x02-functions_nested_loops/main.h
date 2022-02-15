@@ -42,3 +42,6 @@ void jack_bauer(void);
 
 /*this function prints a nine time table*/
 void times_table(void);
+
+/*this function add two integers*/
+int add(int, int);
