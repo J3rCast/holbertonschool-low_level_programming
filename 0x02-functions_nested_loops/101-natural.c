@@ -23,5 +23,5 @@ int main(void)
 		n++;
 	}
 	printf("%d\n", sum);
-	return (sum);
+	return (1);
 }
