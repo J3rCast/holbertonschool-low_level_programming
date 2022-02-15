@@ -10,6 +10,7 @@ void whileloop(char num)
 	char a;
 	char b;
 	char c;
+	char e = '9';
 	char d;
 	while (b <= num)
 			{
@@ -39,7 +40,6 @@ void jack_bauer(void)
 	char b = '0';
 	char c = '0';
 	char d = '0';
-	char e = '9';
 
 	while (a <= '2')
 	{
