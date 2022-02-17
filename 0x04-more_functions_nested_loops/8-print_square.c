@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_diagonal - this function multiplies two values
+ * print_square - this function multiplies two values
  *
- * @n: value
+ * @size: value
  */
 
 void print_square(int size)
