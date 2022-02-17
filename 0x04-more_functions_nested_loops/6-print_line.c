@@ -3,8 +3,6 @@
  * print_line - this function multiplies two values
  *
  * @n: value
- *
- * Return: 0
  */
 
 void print_line(int n)
