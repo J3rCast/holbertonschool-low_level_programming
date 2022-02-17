@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 /**
  * main - fizz buzz
@@ -29,6 +28,6 @@ int main(void)
 			printf("%d ", n);
 		}
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
