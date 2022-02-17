@@ -5,7 +5,7 @@
  *
  */
 
-void main(void)
+int main(void)
 {
 	int n;
 
@@ -30,4 +30,5 @@ void main(void)
 		putchar(' ');
 	}
 	putchar('\n');
+	return (0);
 }
