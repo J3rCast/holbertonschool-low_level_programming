@@ -3,7 +3,7 @@
  * print_numbers - this function multiplies two values
  *
  */
-void main(void)
+void print_numbers(void)
 {
 	int n;
 
