@@ -2,7 +2,6 @@
 /**
  * print_numbers - this function multiplies two values
  *
- * Return: 0
  */
 void print_numbers(void)
 {
