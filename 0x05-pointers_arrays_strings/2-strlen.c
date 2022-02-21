@@ -5,8 +5,11 @@
  */
 int _strlen(char *s)
 {
-	int b;
+	char n;
 
-	b = sizeof(*s);
-	return (b);
+	for (i = 0; n = '\0'; i++)
+	{
+		n = *s[i];
+	}
+	return (i);
 }
