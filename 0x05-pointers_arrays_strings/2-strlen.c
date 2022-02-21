@@ -1,7 +1,9 @@
 /**
- * strlen - this function return the legth of a string
+ * _strlen - this function return the legth of a string
  *
  * @s: value
+ *
+ * Return: value
  */
 int _strlen(char *s)
 {
