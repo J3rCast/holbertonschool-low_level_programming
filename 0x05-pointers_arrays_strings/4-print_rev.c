@@ -20,9 +20,9 @@ void print_rev(char *s)
 	{
 		_putchar(s[i]);
 		i--;
-		if (i == 0)
+		/*if (i == 0)
 		{
 			break;
-		}
+		}*/
 	}
 }
