@@ -21,7 +21,10 @@ void puts2(char *str)
 		dob = i + b;
 		if (dob <= m)
 		{
-			_putchar(str[dob]);
+			if (str[dob] != '\0')
+			{
+				_putchar(str[dob]);
+			}
 		}
 		i++;
 		b++;
