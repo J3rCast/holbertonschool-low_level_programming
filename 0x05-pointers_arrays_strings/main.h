@@ -10,3 +10,5 @@ int _strlen(char *s);
 void _puts(char *str);
 /*this function prints a string in reverse*/
 void print_rev(char *s);
+/*this function prints a string and its reversa*/
+void rev_string(char *s)
