@@ -26,7 +26,10 @@ void puts_half(char *str)
 	}
 	while (half <= arrayLength)
 	{
-		_putchar(str[half]);
+		if (str[half] != '\0')
+		{
+			_putchar(str[half - 1]);
+		}
 		half++;
 	}
 	_putchar('\n');
