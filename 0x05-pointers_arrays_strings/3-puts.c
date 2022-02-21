@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * _strlen - this function return the legth of a string
+ * _puts - this function return the legth of a string
  *
- * @s: value
+ * @str: value
  *
- * Return: value
  */
 void _puts(char *str)
 {
