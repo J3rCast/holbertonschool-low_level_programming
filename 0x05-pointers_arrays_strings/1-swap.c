@@ -14,6 +14,6 @@ void swap_b(int *num1, int *num2)
 }
 void swap_int(int *a, int *b)
 {
-	void swap_a(*a, *b);
-	void swap_b(*a, *b);
+	void swap_a(int *a, int *b);
+	void swap_b(int *a, int *b);
 }
