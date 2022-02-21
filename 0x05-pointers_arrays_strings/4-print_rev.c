@@ -22,5 +22,5 @@ void print_rev(char *s)
 		_putchar(s[m]);
 		m--;
 	}
-	while (m < 0);
+	while (m > 0);
 }
