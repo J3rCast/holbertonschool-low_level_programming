@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_rev - this function return the legth of a string
+ * puts2 - this function return the legth of a string
  *
- * @s: value
+ * @str: value
  *
  */
 void puts2(char *str)
@@ -19,11 +19,12 @@ void puts2(char *str)
 	while (str[i] != '\0')
 	{
 		dob = i + b;
-		if (dob >= m)
+		if (dob <= m)
 		{
-			_putchar(str[i + b]);
+			_putchar(str[dob]);
 		}
 		i++;
 		b++;
 	}
+	_putchar('\n');
 }
