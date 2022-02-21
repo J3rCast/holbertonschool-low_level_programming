@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * _strlen - this function return the legth of a string
+ * print_rev - this function return the legth of a string
  *
  * @s: value
  *
- * Return: value
  */
 void print_rev(char *s)
 {
