@@ -7,23 +7,23 @@
  */
 void rev_string(char *s)
 {
-	char n = 'a';
+	char n;
+	int m = 0;
 	int i = 0;
 
 	while (n != '\0')
 	{
-		n = s[i];
-		if (n != '\0')
+		if (n != '\n')
 		{
-			_putchar(n);
+			n = s[i];
 			i++;
 		}
 	}
-	_putchar('\n');
 	while (i >= 1)
 	{
+		s[i] = s[m];
 		i--;
-		_putchar(s[i]);
+		m++;
 	}
 	_putchar('\n');
 }
