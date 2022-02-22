@@ -10,13 +10,12 @@ void rev_string(char *s)
 	char charAc;
 	int i = 0;
 	int j = 0;
-	int p;
 
 	while (s[i] != '\0')
 	{
 		i++;
 	}
-	p = i - j;
+	i--;
 	while (s[j] != '\0')
 	{
 		charAc = s[j];
