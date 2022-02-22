@@ -28,7 +28,7 @@ void puts_half(char *str)
 	{
 		if (str[half] != '\0')
 		{
-			_putchar(str[half - 1]);
+			_putchar(str[half + 1]);
 		}
 		half++;
 	}
