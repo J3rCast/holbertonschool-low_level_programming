@@ -16,3 +16,5 @@ void rev_string(char *s);
 void puts2(char *str);
 /*this function prints half of a string*/
 void puts_half(char *str);
+/*this funtcion prints n elements of an array*/
+void print_array(int *a, int n);
