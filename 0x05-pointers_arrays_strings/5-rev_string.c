@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_rev - this function return the legth of a string
+ * rev_string - this function return the legth of a string
  *
  * @s: value
  *
@@ -25,4 +25,3 @@ void rev_string(char *s)
 		j++;
 	}
 }
-
