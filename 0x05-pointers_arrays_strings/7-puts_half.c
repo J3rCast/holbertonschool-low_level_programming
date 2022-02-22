@@ -15,7 +15,7 @@ void puts_half(char *str)
 	{
 		i++;
 	}
-	arrayLength = i -1;
+	arrayLength = i + 1;
 	if (arrayLength % 2 == 0)
 	{
 		half = arrayLength / 2;
@@ -28,7 +28,7 @@ void puts_half(char *str)
 	{
 		if (str[half] != '\0')
 		{
-			_putchar(str[half + 1]);
+			_putchar(str[half]);
 		}
 		half++;
 	}
