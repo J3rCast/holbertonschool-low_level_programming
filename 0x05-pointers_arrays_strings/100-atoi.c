@@ -31,6 +31,10 @@ int _atoi(char *s)
 		{
 			i++;
 		}
+		else
+		{
+			i--;
+		}
 		if (s[i] > '9' && s[i] < 0)
 		{
 			return (0);
