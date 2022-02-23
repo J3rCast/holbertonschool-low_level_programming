@@ -27,7 +27,7 @@ int _atoi(char *s)
 		if (s[i] > '9' && s[i] < 0)
 			return (0);
 	}
-	if (negative % 2 != 0)
+	if (negative % 2 != 0 && negative != 1 && result != 0)
 	{
 		_putchar('-');
 	}
