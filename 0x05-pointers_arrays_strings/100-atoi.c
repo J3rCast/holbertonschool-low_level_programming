@@ -27,13 +27,13 @@ int _atoi(char *s)
 				s[i] = '\0';
 			}
 		}
-		if (s[i] > '9' && s[i] < 0)
-		{
-			return (0);
-		}
 		if (s[i] != '\0')
 		{
 			i++;
+		}
+		if (s[i] > '9' && s[i] < 0)
+		{
+			return (0);
 		}
 	}
 	if (result != 0 && (negative % 2 != 0 || negative == 1))
