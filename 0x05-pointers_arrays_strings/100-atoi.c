@@ -20,7 +20,7 @@ int _atoi(char *s)
 		{
 			negative++;
 		}
-		if ((s[i] >= '0' && s[i] <= '9') && (s[i + 2] >= '0' && s[i + 2] <= 9))
+		if (s[i] >= '0' && s[i] <= '9')
 		{
 			result = result * 10 + s[i] - '0';
 		}
