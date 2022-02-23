@@ -32,7 +32,7 @@ int _atoi(char *s)
 	}
 	if (result > 0 && (negative % 2 != 0 || negative == 1))
 	{
-		_putchar('-');
+		result = result * -1;
 	}
 	return (result);
 }
