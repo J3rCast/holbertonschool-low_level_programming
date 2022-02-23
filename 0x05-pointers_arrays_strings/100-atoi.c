@@ -1,17 +1,16 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * *_strcpy - this function return the legth of a string
+ * _atoi - this function return the legth of a string
  *
- * @dest: where the source need to be copied
- * @src: source of the string
+ * @s: string
  *
- * Return: Dest ponter
+ * Return: 0
  */
 int _atoi(char *s)
 {
 	int i;
-	unsigned int result = 0;
+	int result = 0;
 	int negative = 0;
 
 	for (i = 0; s[i] != '\0'; ++i)
