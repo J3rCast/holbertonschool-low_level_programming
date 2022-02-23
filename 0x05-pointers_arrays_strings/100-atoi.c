@@ -11,13 +11,14 @@
 int _atoi(char *s)
 {
 	int i;
-	long int result = 0;
+	int result = 0;
+	int negative = 0;
 
 	for (i = 0; s[i] != '\0'; ++i)
 	{
-		if (s[i] == '-' && s[i + 1] > '0' && s[i + 1] <= '9')
+		if (s[i] == '-')
 		{
-			_putchar('-');
+			negative++;
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
@@ -25,6 +26,10 @@ int _atoi(char *s)
 		}
 		if (s[i] > '9' && s[i] < 0)
 			return (0);
+	}
+	if (negative % 2 != 0)
+	{
+		_putchar('-');
 	}
 	return (result);
 }
