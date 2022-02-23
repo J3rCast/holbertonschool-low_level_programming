@@ -22,10 +22,6 @@ int _atoi(char *s)
 		{
 			_putchar(s[i]);
 		}
-		if (s[i] > '9' || s[i] < '0')
-		{
-			return (0);
-		}
 	}
 	return (0);
 }
