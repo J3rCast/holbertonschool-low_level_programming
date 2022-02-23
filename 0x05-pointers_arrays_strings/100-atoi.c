@@ -23,5 +23,5 @@ int _atoi(char *s)
 			_putchar(s[i]);
 		}
 	}
-	return (0);
+	return;
 }
