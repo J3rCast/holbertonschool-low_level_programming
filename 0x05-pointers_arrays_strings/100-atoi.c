@@ -28,5 +28,5 @@ int _atoi(char *s)
 			n = 0;
 		}
 	}
-	return (n)
+	return (n);
 }
