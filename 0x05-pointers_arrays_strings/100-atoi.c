@@ -25,6 +25,7 @@ int _atoi(char *s)
 			if (s[i + 1] < '0' && s[i + 1] > '9')
 			{
 				s[i] = '\0';
+				break;
 			}
 		}
 		if (s[i] > '9' && s[i] < 0)
