@@ -20,3 +20,4 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 /*this function copies from a pointer to another*/
 char *_strcpy(char *dest, char *src);
+int _atoi(char *s);
