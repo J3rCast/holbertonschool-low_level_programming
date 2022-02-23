@@ -28,7 +28,7 @@ int _atoi(char *s)
 			return (0);
 		}
 	}
-	if (result > 0 && (negative % 2 != 0 || negative == 1))
+	if (result != INT_MIN && result > 0 && (negative % 2 != 0 || negative == 1))
 	{
 		_putchar('-');
 	}
