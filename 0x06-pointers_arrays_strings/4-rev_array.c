@@ -10,20 +10,14 @@
 void reverse_array(int *a, int n)
 {
 	char charAc;
-	int i = 0;
 	int j = 0;
 
-	while (a[i] != '\0')
-	{
-		i++;
-	}
-	i--;
-	while (j <= i)
+	while (j <= n)
 	{
 		charAc = a[j];
-		a[j] = a[i];
-		a[i] = charAc;
-		i--;
+		a[j] = a[n];
+		a[n] = charAc;
+		n--;
 		j++;
 	}
 }
