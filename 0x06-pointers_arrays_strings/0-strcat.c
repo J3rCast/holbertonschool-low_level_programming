@@ -10,26 +10,6 @@ char *_strcat(char *dest, char *src)
 
 	while(dest[length] != '\0')
 	{
-		complete[length] = dest[length];
-		length++;
-		if (dest[length] == '\0') 
-		{
-			while(src[length2] != '\0')
-			{
-				complete[length] = src[length2];
-				length++;
-				length2++;
-			}
-		}
-	}
-	int length = 0;
-	int length2 = 0;
-	char complete[98];
-	char dest[] = "hola ";
-	char src[] = "mundo";
-
-	while(dest[length] != '\0')
-	{
 		if (dest[length2] != '\0')
 		{
 			complete[length] = dest[length];
