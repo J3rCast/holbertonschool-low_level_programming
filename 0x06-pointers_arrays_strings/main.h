@@ -1,3 +1,4 @@
+#include <stdio.h>
 /*this function is equals putchar*/
 int _putchar(char c);
 /*this function concatenates two strings*/
