@@ -31,5 +31,5 @@ char *_strcat(char *dest, char *src)
 		dest[length] = complete[length];
 		length++;
 	}
-	return (*dest);
+	return (dest);
 }
