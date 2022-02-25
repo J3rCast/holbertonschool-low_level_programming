@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _toupper - this function pass to upper
+ * string_toupper - this function pass to upper
  *
  * @string: dest string
  *
