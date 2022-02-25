@@ -44,4 +44,5 @@ char *cap_string(char *s)
 		else
 		continue;
 	}
+	return (s);
 }
