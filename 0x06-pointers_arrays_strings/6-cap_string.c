@@ -1,11 +1,10 @@
 #include "main.h"
 /**
- * _strcmp - this function concatnates two strings
+ * cap_string - this function capitalize
  *
- * @s1: dest string
- * @s2: src string
+ * @s: dest string
  *
- * Return: 0
+ * Return: s
  */
 char *cap_string(char *s)
 {
