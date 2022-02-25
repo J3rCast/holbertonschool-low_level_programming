@@ -17,29 +17,31 @@ char *cap_string(char *s)
 			return (s[i + 1] -= 32);
 		if (s[i - 1] == ' ' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == ',' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == ',' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == ';' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == ';' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == '.' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == '.' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == '!' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == '!' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == '?' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == '?' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == '\"' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == '\"' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == '(' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == '(' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == ')' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == ')' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == '{' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == '{' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == '}' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == '}' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == '\n' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == '\n' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
-		if (s[i - 1] == '\t' && s[i] >= 'a' && s[i] <= 'z')
+		else if (s[i - 1] == '\t' && s[i] >= 'a' && s[i] <= 'z')
 			return (s[i + 1] -= 32);
+		else
+		continue;
 	}
 }
