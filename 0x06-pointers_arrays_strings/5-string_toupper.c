@@ -2,10 +2,9 @@
 /**
  * _toupper - this function pass to upper
  *
- * @s1: dest string
- * @s2: src string
+ * @string: dest string
  *
- * Return: 0
+ * Return: string
  */
 char *string_toupper(char *string)
 {
