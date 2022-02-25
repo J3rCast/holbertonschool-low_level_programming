@@ -43,4 +43,5 @@ char *cap_string(char *s)
 		if (s[i - 1] == '\t' && s[i] >= 'a' && s[i] <= 'z')
 			s[i + 1] -= 32;
 	}
+	return (s);
 }
