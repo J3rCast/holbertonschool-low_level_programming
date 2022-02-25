@@ -1,11 +1,9 @@
 #include "main.h"
 /**
- * _strcmp - this function concatnates two strings
+ * reverse_array - this function concatnates two strings
  *
- * @s1: dest string
- * @s2: src string
- *
- * Return: 0
+ * @a: array to reverse
+ * @n: number of bytes
  */
 void reverse_array(int *a, int n)
 {
