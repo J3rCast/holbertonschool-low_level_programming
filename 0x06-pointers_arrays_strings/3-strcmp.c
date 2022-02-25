@@ -9,25 +9,18 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
-	int result = 0;
-
-	while (s1[i] != '\0' || s2[i] != '\0')
+	while( ( *s1 != '\0' && *s2 != '\0' ) && *s1 == *s2 )
 	{
-		if (s1[i] == s2[i] && (s1[i] == '\0' && s2[i] == '\0'))
-		{
-			result = 0;
-		}
-		else if (s1[i] < s2[i])
-		{
-			result = result - s2[i];
-		}
-		else if (s1[i] > s2[i])
-		{
-			result = result + s1[i];
-		}
-		i++;
+		s1++;
+		s2++;
+	}
+	if(*s1 == *s2)
+	{
+		return 0; // strings are identical
+	}
+	else
+	{
+		return *s1 - *s2;
 	}
 
-	return (result);
 }
