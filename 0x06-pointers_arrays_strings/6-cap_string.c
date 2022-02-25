@@ -9,14 +9,21 @@
  */
 char *cap_string(char *s)
 {
+	#define SEPARATORS ",;.!?\"(){} \t\n";
 	int i;
 	int tmp;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i - 1] == " ")
+		if (s[i] == 0 && s[i] >0 'a' && s[i] <= 'z')
+			s[i + 1] -= 32;
+		for (j = 0; SEPARATORS [j]; j++)
 		{
-			return = s[i + 32];
+			if (s[i] == SEPARATORS[j] && s[i + 1] >= 'a' && s[i + 1] <= 'z')
+			{
+				s[i + 1] -= 32;
+				break;
+			}
 		}
 	}
 }
