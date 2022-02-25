@@ -16,10 +16,8 @@ int _strcmp(char *s1, char *s2)
 	{
 		if(s1[i] == s2[i])
 			result = 0; // strings are identical
-		else if (s1[i] < s2[i])
-			result = -1;
-		else
-			result = 1;
+		else (s1[i] != s2[i])
+			result = s1[i] - s2[i];
 	}
 	return (result);
 }
