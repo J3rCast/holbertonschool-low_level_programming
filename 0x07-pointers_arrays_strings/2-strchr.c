@@ -3,18 +3,17 @@
  * _strchr - this function locates a character
  *
  * @s: string
- * @c: charachter to find 
+ * @c: charachter to find
  *
  * Return: dest
  */
 
 char *_strchr(char *s, char c)
 {
-	do
-	{
+	do {
 		if (*s == c)
 		{
-			return (char*)s;
+			return ((char *)s);
 		}
 	} while (*s++);
 	return (0);
