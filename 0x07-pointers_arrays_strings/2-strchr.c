@@ -8,17 +8,14 @@
  * Return: dest
  */
 
-}
 char *_strchr(char *s, char c)
 {
-	int i = 0;
-
 	do
 	{
-		if (s[i] == c)
+		if (*s == c)
 		{
-			return (s[i]);
+			return (char*)s;
 		}
-	} while (i++);
+	} while (*s++);
 	return (0);
 }
