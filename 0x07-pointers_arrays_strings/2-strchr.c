@@ -11,18 +11,17 @@
 }
 char *_strchr(char *s, char c)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	do (s[i] != '\0')
 	{
 		if (s[i] == c)
 		{
 			return (s[i]);
-			break;
 		}
 		else if (s[i] == '\0')
 		{
 			return (NULL);
 		}
-	}
+	} while (i++);
 }
