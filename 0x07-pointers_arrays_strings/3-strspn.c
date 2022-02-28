@@ -15,6 +15,8 @@ unsigned int _strspn(char *s, char *accept)
 	int z = 0;
 	int b = 0;
 
+	if (accept[0] == 0)
+		return (0);
 	while (accept[z] != '\0')
 	{
 		z++;
