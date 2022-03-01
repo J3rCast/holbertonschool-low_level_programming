@@ -24,5 +24,6 @@ char *_strpbrk(char *s, char *accept)
 			x++;
 		}
 		i++;
+		x = 0;
 	}
 }
