@@ -31,6 +31,10 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
+		if (accept[x] == '\0')
+		{
+			break;
+		}
 	}
 	return (b);
 }
