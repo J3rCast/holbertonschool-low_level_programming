@@ -15,8 +15,6 @@ unsigned int _strspn(char *s, char *accept)
 	int z = 0;
 	int b = 0;
 
-	if (s[0] == '\0')
-		return (1);
 	while (accept[z] != '\0')
 	{
 		z++;
@@ -36,5 +34,5 @@ unsigned int _strspn(char *s, char *accept)
 			break;
 		}
 	}
-	return (b);
+	return (i);
 }
