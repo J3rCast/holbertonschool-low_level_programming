@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strspn - this function gets the legth in bytes
+ * _strpbrk - this function gets the legth in bytes
  *
  * @s: string
  * @accept: charachter to find
