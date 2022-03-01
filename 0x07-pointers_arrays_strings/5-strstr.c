@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _strpbrk - this function gets the legth in bytes
+ * _strstr - this function gets the legth in bytes
  *
- * @s: string
- * @accept: charachter to find
+ * @haystack: string
+ * @needle: substring to find
  *
  * Return: dest
  */
@@ -28,5 +28,5 @@ char *_strstr(char *haystack, char *needle)
 			return (haystack + i);
 		}
 	}
-	return (haystack + i);
+	return (0);
 }
