@@ -4,12 +4,12 @@
  *
  * @n: sourc number
  *
- * Return: len or 0
+ * Return: factorial of n
  */
 
 int factorial(int n)
 {
-	if (n == 0)
+	if (n <= 0)
 	{
 		return (1);
 	}
