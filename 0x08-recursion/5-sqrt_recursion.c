@@ -9,9 +9,9 @@
 
 int _sqrt_recursion(int n)
 {
-	int tmp = 3;
+	int tmp = 2;
 
-	if ((n % tmp) == 0)
+	if (tmp * tmp == n)
 		return (tmp);
 
 	return (_sqrt_recursion(n % (tmp + 1)));
