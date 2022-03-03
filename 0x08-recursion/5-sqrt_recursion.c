@@ -14,5 +14,5 @@ int _sqrt_recursion(int n)
 	if (tmp * tmp == n)
 		return (tmp);
 
-	return (_sqrt_recursion(n) / tmp + 1);
+	return (_sqrt_recursion(n - 1) + 1);
 }
