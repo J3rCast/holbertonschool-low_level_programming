@@ -9,10 +9,10 @@
 
 int _sqrt_recursion(int n)
 {
-	int tmp = 2;
+	int tmp = 1;
 
 	if (tmp * tmp == n)
 		return (tmp);
 
-	return (_sqrt_recursion((tmp + 1 * tmp + 1) / tmp + 1));
+	return (_sqrt_recursion(temp + 1));
 }
