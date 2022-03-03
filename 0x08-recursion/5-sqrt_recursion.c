@@ -13,7 +13,8 @@ int _sqrt_recursion(int n)
 
 	if (tmp * tmp == n)
 		return (tmp);
-	tmp++;
+	if (tmp * tmp !== n)
+		tmp++;
 
 	return (_sqrt_recursion(n));
 }
