@@ -18,10 +18,7 @@ int main(int argc, char *argv[])
 	{
 		while (i < argc)
 		{
-			if (*argv[i] <= '9' && *argv[i] >= '0')
-			{
-				result += atoi(argv[i]);
-			}
+			result += atoi(argv[i]);
 			i = i + 1;
 		}
 		printf("%d\n", result);
