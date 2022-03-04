@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
  * main - this program prints its name
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			printf("Error\n");
+			/*printf("Error\n");*/
 			return (1);
 		}
 	}
