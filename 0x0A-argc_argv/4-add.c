@@ -14,19 +14,26 @@ int main(int argc, char *argv[])
 	int i = 1;
 	int result = 0;
 
-	while (i < argc)
+	if (argc > 1)
 	{
-		if (*argv[i] <= '9' && *argv[i] >= '0')
+		while (i < argc)
 		{
-			result += atoi(argv[i]);
+			if (*argv[i] <= '9' && *argv[i] >= '0')
+			{
+				result += atoi(argv[i]);
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+			i = i + 1;
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-		i = i + 1;
+		printf("%d\n", result);
 	}
-	printf("%d\n", result);
+	else if (argc == 1)
+	{
+		printf("0\n");
+	}
 	return (0);
 }
