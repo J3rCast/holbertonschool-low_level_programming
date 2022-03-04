@@ -9,15 +9,27 @@
  *
  * Return: 0
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 	int result = 0;
 
-	for (i = 1; argv[i]; i++)
+	if (argc > 1)
 	{
-		result += atoi(argv[i]);
+		while (i < argc)
+		{
+			result += atoi(argv[i]);
+			i++;
+		}
+		printf("%d\n", result);
 	}
-	printf("%d\n", result);
+	else if (argc == 1)
+		printf("0\n");
+	else 
+	{
+		printf("Error\n");
+		return (1);
+	}
+
 	return (0);
 }
