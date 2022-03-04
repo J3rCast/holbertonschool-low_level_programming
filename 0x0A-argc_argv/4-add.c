@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int result = 0;
+	long int result = 0;
 
 	for (i = 1; i < argc; i++)
 	{
@@ -26,6 +26,6 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 	}
-	printf("%d\n", result);
+	printf("%ld\n", result);
 	return (0);
 }
