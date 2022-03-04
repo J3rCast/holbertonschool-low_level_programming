@@ -9,27 +9,23 @@
  *
  * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	int i;
 	int result = 0;
 
-	if (argc > 1)
+	for (i = 1; i < argc; i++)
 	{
-		while (i < argc)
+		if (*argv[i] >= '0' && *argv[i] <= '9')
 		{
 			result += atoi(argv[i]);
-			i++;
 		}
-		printf("%d\n", result);
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
-	else if (argc == 1)
-		printf("0\n");
-	else 
-	{
-		printf("Error\n");
-		return (1);
-	}
-
+	printf("%d\n", result);
 	return (0);
 }
