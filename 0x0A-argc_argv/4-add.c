@@ -20,6 +20,10 @@ int main(int argc, char *argv[])
 		{
 			result += atoi(argv[i]);
 		}
+		else if (argc == 1)
+		{
+			printf("0\n");
+		}
 		else
 		{
 			printf("Error\n");
