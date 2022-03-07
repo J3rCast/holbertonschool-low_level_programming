@@ -19,10 +19,7 @@ char *str_concat(char *s1, char *s2)
 	int len1;
 	int len2;
 
-	if (s1 == NULL)
-	{
-		*s1 = '\0';
-	}
+	
 	/*calculate first string length*/
 	for (len1 = 0; n; len1++)
 	{
@@ -43,6 +40,10 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (i = 0; i + 1 < len1; i++)
 	{
+		if (s1 == NULL)
+		{
+			*s1 = '\0';
+		}
 		x[i] = s1[i];
 	}
 	for (j = 0; i < (len1 + len2); i++)
