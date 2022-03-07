@@ -35,13 +35,13 @@ char *str_concat(char *s1, char *s2)
 		n = s2[len2];
 	}
 
-	x = malloc((sizeof(char) * len1) + (sizeof(char) * len2));
+	x = malloc((sizeof(char) * len1 - 1) + (sizeof(char) * len2));
 
 	if (x == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < len1 - 1; i++)
+	for (i = 0; i + 1 < len1; i++)
 	{
 		x[i] = s1[i];
 	}
