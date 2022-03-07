@@ -28,5 +28,9 @@ char *create_array(unsigned int size, char c)
 			x[i] = c;
 		}
 	}
+	else
+	{
+		printf("Can't allocate %c chars (after %d calls)\n", c, 98);
+	}
 	return (x);
 }
