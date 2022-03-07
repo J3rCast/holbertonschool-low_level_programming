@@ -26,7 +26,7 @@ char *create_array(unsigned int size, char c)
 		x[i] = c;
 		if (x == NULL)
 		{
-			printf("Can't allocate %d bytes (after %d calls)\n", INT_MAX, i);
+			printf("Can't allocate %d bytes (after %d calls)\n", size, i);
 		}
 	}
 	return (x);
