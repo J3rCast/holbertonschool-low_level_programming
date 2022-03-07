@@ -23,12 +23,11 @@ char *create_array(unsigned int size, char c)
 	}
 	if (x == NULL)
 	{
-		printf("Can't allocate %c chars (after %d calls)\n", c, 98);
+		return (NULL);
 	}
 	for (i = 0; size > i; i++)
 	{
 		x[i] = c;
 	}
-	
 	return (x);
 }
