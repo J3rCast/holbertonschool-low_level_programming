@@ -21,16 +21,14 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	if (x != NULL)
-	{
-		for (i = 0; size > i; i++)
-		{
-			x[i] = c;
-		}
-	}
-	else
+	if (x == NULL)
 	{
 		printf("Can't allocate %c chars (after %d calls)\n", c, 98);
 	}
+	for (i = 0; size > i; i++)
+	{
+		x[i] = c;
+	}
+	
 	return (x);
 }
