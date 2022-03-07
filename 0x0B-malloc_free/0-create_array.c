@@ -21,13 +21,14 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	for (i = 0; size > i; i++)
-	{
-		x[i] = c;
-		if (x == NULL)
+	if (x == NULL)
 		{
 			printf("Can't allocate %d bytes (after %d calls)\n", size, i);
 		}
+	for (i = 0; size > i; i++)
+	{
+		x[i] = c;
+		
 	}
 	return (x);
 }
