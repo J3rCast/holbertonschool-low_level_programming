@@ -12,8 +12,8 @@ char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
 	char *x;
-	x = malloc(sizeof(char) * size);
 
+	x = malloc(sizeof(char) * size);
 	x[0] = c;
 
 	if (size == 0)
@@ -24,7 +24,7 @@ char *create_array(unsigned int size, char c)
 	{
 		if (x == NULL)
 		{
-			return ("f");
+			printf("Can't allocate %d bytes (after %d calls)\n", size, i);
 		}
 		x[i] = c;
 	}
