@@ -1,12 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * alloc_grid - this function concatenate two strings
+ * free_grid - this function concatenate two strings
  *
- * @width: width
+ * @grid: 2 dimensional array to free
  * @height: height
  *
- * Return: int
  */
 
 void free_grid(int **grid, int height)
