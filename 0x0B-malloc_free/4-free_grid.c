@@ -13,17 +13,11 @@ void free_grid(int **grid, int height)
 {
 	int i;
 
-	for (i = 0; i < height; i++)
+	if (height <= 0)
+		return;
+	for (i = height; i >= 0; i--)
 	{
-		grid[i] = malloc(sizeof(int) * width);
-		if (array[i] == NULL)
-		{
-			for (; i >= 0; i--)
-			{
-				free(array[i]);
-			}
-			free(array);
-			return (NULL);
-		}
+		free(grid[i]);
 	}
+	free(grid);
 }
