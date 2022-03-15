@@ -1,5 +1,5 @@
-#ifndef _SAMPLE_HEADER_H_
-#define _SAMPLE_HEADER_H_
+#ifndef _DOG_H
+#define _DOG_H
 /**
  * struct dog - struct of dog data
  * @name: name of the dog
@@ -11,5 +11,5 @@ struct dog
 	char *name;
 	float age;
 	char *owner;
-}
+};
 #endif
