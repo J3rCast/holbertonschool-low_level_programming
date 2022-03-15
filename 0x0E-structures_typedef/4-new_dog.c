@@ -2,17 +2,74 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * *_strcpy - this function return the legth of a string
+ *
+ * @dest: where the source need to be copied
+ * @src: source of the string
+ *
+ * Return: Dest ponter
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int length;
+
+	for (length = 0; src[length] != '\0'; length++)
+	{
+		dest[length] = src[length];
+	}
+	dest[length] = src[length];
+	return (dest);
+}
+/**
+ * _strlen - this function return the legth of a string
+ *
+ * @s: value
+ *
+ * Return: value
+ */
+int _strlen(char *s)
+{
+	char n;
+	int i;
+
+	for (i = 0; (n != '\0'); i++)
+	{
+		n = s[i];
+	}
+	return (i - 1);
+}
+/**
  * new_dog - this funcion prints dog nfo
  * @name: dog name
  * @age: dog age
  * @owner: dog owner
- * dog - struct name
+ * Return: struct dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	if (new_dog == NULL)
-		return;
-	new_dog->name = name;
-	new_dog->age = age;
-	new_dog->owner = owner;
+	dog_t *newerDog;
+
+	newerDog = malloc(sizeof(dog_t));
+	if (newerDog == NULL)
+		return (NULL);
+
+	newerDog->name = malloc(sizeof(char) * _strlen(name));
+	if (newerDog->name == NULL)
+	{
+		free (newerDog);
+		return (NULL);
+	}
+	newerDog->owner = malloc(sizeof(char) * _strlen(owner));
+	if (newerDog->owner == NULL)
+	{
+		free (newerDog->name);
+		free (newerDog);
+		return (NULL);
+	}
+
+	newerDog->name = _strcpy(newerDog->name, name);
+	newerDog->age = age;
+	newerDog->owner = _strcpy(newerDog->owner, owner);
+
+	return (newerDog);
 }
