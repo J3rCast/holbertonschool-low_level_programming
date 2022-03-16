@@ -1,6 +1,10 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
+dog_t *new_dog(char *name, float age, char *owner);
 /**
  * *_strcpy - this function return the legth of a string
  *
@@ -62,6 +66,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newerDog);
 		return (NULL);
 	}
+
 	newerDog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
 	if (newerDog->owner == NULL)
 	{
