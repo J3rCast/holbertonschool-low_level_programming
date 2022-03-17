@@ -10,8 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int first = atoi(argv[1]);
-	int second = atoi(argv[3]);
+	int first;
+	int second;
 	int (*get)(int, int);
 
 	if (argc != 4)
@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+	first = atoi(argv[1]);
+	second = atoi(argv[3]);
 	get = get_op_func(argv[2]);
 	if (get == NULL)
 	{
