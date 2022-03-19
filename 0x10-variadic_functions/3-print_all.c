@@ -25,25 +25,19 @@ int _strlen(const char *s)
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	int lenF;
-	int j = 0;
-	char character;
-	int integer;
+	int j = 0, integer, x = 0;
 	float floatNum;
 	char *string;
-	int x = 0;
 
-	lenF = _strlen(format);
 	va_start(ap, format);
-
-	while (j < lenF)
+	while (j < _strlen(format))
 	{
 		x = 0;
-		switch(format[j])
+		switch (format[j])
 		{
 			case 'c':
-				character = va_arg(ap, int);
-				printf("%c", character);
+				
+				printf("%c", va_arg(ap, int));
 				break;
 			case 'i':
 				integer = va_arg(ap, int);
@@ -65,7 +59,7 @@ void print_all(const char * const format, ...)
 			default:
 				x = 1;
 		}
-		if (j != (lenF - 1) && x == 0)
+		if (j != (_strlen(format) - 1) && x == 0)
 			printf(", ");
 		j++;
 	}
