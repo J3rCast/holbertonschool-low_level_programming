@@ -2,15 +2,15 @@
 /**
  * print_numbers - this function sum all the arguments passed
  * @separator: separator char
- * @n: last argument fixed
+ * @n: number of arguments passed
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
 	unsigned int i;
 
-	if (n <= 0)
-		return;
+	/*if (n <= 0)*/
+		/*return;*/
 
 	va_start(ap, n);
 	for (i = 1; i < n; i++)
@@ -20,10 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else
 			printf("%d", va_arg(ap, int));
 	}
-	if (separator != NULL)
-		printf("%d", va_arg(ap, int));
-	else
-		printf("%d", va_arg(ap, int));
+	printf("%d", va_arg(ap, int));
 	va_end(ap);
 	printf("\n");
 }
