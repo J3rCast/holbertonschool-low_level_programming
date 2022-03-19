@@ -58,7 +58,7 @@ void print_all(const char * const format, ...)
 		if (j != (_strlen(format) - 1) && x == 0)
 			printf(", ");
 		j++;
+		va_end(ap);
 	}
 	printf("\n");
-	va_end(ap);
 }
