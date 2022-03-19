@@ -28,6 +28,8 @@ void print_all(const char * const format, ...)
 	char *string;
 	int j = 0, x = 0;
 
+	if (!format)
+		return;
 	va_start(ap, format);
 	while (j < _strlen(format))
 	{
