@@ -16,7 +16,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		if (separator != NULL)
-			printf("%u%s ", va_arg(ap, const unsigned int), separator);
+			printf("%u%s", va_arg(ap, const unsigned int), separator);
 	}
 	printf("\n");
 	va_end(ap);
