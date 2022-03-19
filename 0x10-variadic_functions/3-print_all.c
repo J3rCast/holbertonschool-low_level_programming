@@ -29,7 +29,7 @@ void print_all(const char * const format, ...)
 	int j = 0, x = 0;
 
 	va_start(ap, format);
-	while (j < _strlen(format) && format)
+	while (j < _strlen(format) && format[j])
 	{
 		x = 0;
 		switch (format[j])
