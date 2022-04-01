@@ -5,7 +5,7 @@
  */
 void free_listint(listint_t *head)
 {
-	if (!head && !(*head))
+	if (!head)
 		return;
 
 	if (head->next != NULL)
