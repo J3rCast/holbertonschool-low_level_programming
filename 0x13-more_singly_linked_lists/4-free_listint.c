@@ -5,8 +5,9 @@
  */
 void free_listint(listint_t *head)
 {
-	if (head == NULL && (*head) == NULL)
+	if (!head && !(*head))
 		return;
+
 	if (head->next != NULL)
 		free_listint(head->next);
 	free(head);
