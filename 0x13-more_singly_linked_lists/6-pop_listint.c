@@ -2,6 +2,7 @@
 /**
  * pop_listint - this function pop a list
  * @head: pointer to list
+ * Return: the data in head
  */
 int pop_listint(listint_t **head)
 {
