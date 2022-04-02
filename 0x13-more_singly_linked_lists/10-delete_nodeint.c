@@ -2,6 +2,8 @@
 /**
  * delete_nodeint_at_index - this function removes a specific node
  * @head: pointer to list head
+ * @index: index of the node to delete
+ * Return: 0
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
@@ -26,7 +28,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	previous->next = temp->next;
 	}
 
-	(*head) = (*head)->next;
 	free(temp);
-	return (0);
+	return (1);
 }
