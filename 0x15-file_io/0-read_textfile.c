@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	text[letters] = '\0';
 
-	wRet = write(STOUT_FILENO, text, letters); /* and finally write it in stdout*/
+	wRet = write(STDOUT_FILENO, text, letters); /* and finally write it in stdout*/
 
 	if (oRet == -1 || wRet == -1 || rRet == -1)
 	{
