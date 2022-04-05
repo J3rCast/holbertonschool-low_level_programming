@@ -19,8 +19,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	fd = open(filename, O_RDONLY); /* first open the file */
-	if (fd == -1)
-		return (0);
 
 	bNum = read(fd, text, letters); /* then read the content of the file */
 
@@ -30,8 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 
 	fd = write(1, text, letters); /* and finally writte it  in stdout*/
-	if (fd == -1)
-		return (0);
+
 	close(fd);
 
 	free(text); /* free the buffer */
