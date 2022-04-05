@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	text = malloc(sizeof(char) * 1024); /*set buffer*/
-	oRet = open(argv[1], O_RDONLY | O_APPEND); /*open first file*/
+	oRet = open(argv[1], O_RDONLY); /*open first file*/
 	if (oRet < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	rRet = read(oRet, text, 1024); /*read first file*/
+	closeFd(oRet);
 	/*open the second file*/
 	oRet2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (oRet2 < 0)
@@ -43,15 +44,13 @@ int main(int argc, char *argv[])
 		free(text);
 		exit(99);
 	}
-	wRet = write(oRet, text, rRet);
-	text[1024] = '\0';
+	wRet = write(oRet, text, rRet);/*write on the second file*/
 	if (wRet == -1 || oRet == -1 || rRet == -1)
 	{
 		free(text);
 		return (-1);
 	}
 	closeFd(oRet2);
-	closeFd(oRet);
 	free(text);
 	return (0);
 }
