@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	if (text == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(98);
+		exit(99);
 	}
 	oRet = open(argv[1], O_RDONLY); /*open first file*/
 	if (oRet < 0)
