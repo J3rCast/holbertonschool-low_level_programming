@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	text = malloc(sizeof(char) * 1024);
-	oRet = open(argv[1], O_RDONLY);
+	oRet = open(argv[1], O_RDONLY | O_APEND);
 	if (oRet < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
