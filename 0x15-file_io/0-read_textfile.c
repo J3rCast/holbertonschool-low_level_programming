@@ -23,6 +23,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	bNum = read(fd, text, letters); /* then read the content of the file */
+	if (bNum == -1)
+		return (0);
 
 	text[letters] = '\0';
 
