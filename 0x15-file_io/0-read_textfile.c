@@ -28,9 +28,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	text[letters] = '\0';
 
+	close(fd);
+
 	write(1, text, letters); /* and finally writte it  in stdout*/
 
-	close(fd);
 	free(text); /* free the buffer */
 
 	return (bNum);
