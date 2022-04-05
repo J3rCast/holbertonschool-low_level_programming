@@ -17,16 +17,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	text = malloc(letters);
 
 	if (text == NULL)
-		return (-1);
+		return (0);
 
 	fd = open(filename, O_RDONLY); /* first open the file */
 	if (fd == -1)
 		return (0);
 
 	bNum = read(fd, text, letters); /* then read the content of the file */
+	if (bNum == -1)
+		return (0);
+
 	text[letters] = '\0';
 
-	write(1, text, letters); /* and finally writte it  in stdout*/
+	fd = write(1, text, letters); /* and finally writte it  in stdout*/
+	if (fd == -1)
+		return (0);
 
 	close(fd);
 	free(text); /* free the buffer */
