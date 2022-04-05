@@ -8,6 +8,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
+	int bNum = 0;
 	char *text;
 
 	if (filename == NULL)
@@ -22,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	fd = read(fd, text, letters); /* then read the content of the file */
+	bNum = read(fd, text, letters); /* then read the content of the file */
 	if (bNum == -1)
 		return (0);
 
