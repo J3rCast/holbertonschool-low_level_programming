@@ -8,7 +8,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	int wRet;
+	unsigned long int wRet;
 	int bNum = 0;
 	char *text;
 
