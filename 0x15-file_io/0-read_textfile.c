@@ -7,9 +7,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	unsigned long int wRet;
-	int bNum = 0;
+	ssize_t wRet = 0, oRet = 0, rRet = 0;
 	char *text;
 
 	if (filename == NULL)
@@ -19,23 +17,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (text == NULL)
 		return (0);
 
-	fd = open(filename, O_RDONLY); /* first open the file */
-	if (fd == -1)
-		return (0);
+	oRet = open(filename, O_RDONLY); /* first open the file */
 
-	bNum = read(fd, text, letters); /* then read the content of the file */
-	if (bNum == -1)
-		return (0);
+	rRet = read(oRet, text, letters); /* then read the content of the file */
 
 	text[letters] = '\0';
 
-	close(fd);
+	wRet = write(1, text, letters); /* and finally write it in stdout*/
 
-	wRet = write(1, text, letters); /* and finally writte it in stdout*/
-	if (wRet > letters)
+	if (oRet == -1 || wRet == -1 || rRet == -1)
+	{
+		free(text); /* free the buffer */
 		return (0);
+	}
+	close(oRet);
+	free(text);
 
-	free(text); /* free the buffer */
-
-	return (bNum);
+	return (rRet);
 }
