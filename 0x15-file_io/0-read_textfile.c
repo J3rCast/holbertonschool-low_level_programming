@@ -8,7 +8,6 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	int bNum = 0;
 	char *text;
 
 	if (filename == NULL)
@@ -23,13 +22,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 
-	bNum = read(fd, text, letters); /* then read the content of the file */
+	fd = read(fd, text, letters); /* then read the content of the file */
 	if (bNum == -1)
 		return (0);
 
 	text[letters] = '\0';
 
 	fd = write(1, text, letters); /* and finally writte it  in stdout*/
+	if (fd == -1)
+		return (0);
 
 	close(fd);
 	free(text); /* free the buffer */
