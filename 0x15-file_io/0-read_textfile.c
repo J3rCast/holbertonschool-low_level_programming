@@ -15,7 +15,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	text = malloc(letters);
-
 	if (text == NULL)
 		return (0);
 
@@ -27,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	text[letters] = '\0';
 
-	fd = write(1, text, letters); /* and finally writte it  in stdout*/
+	write(1, text, letters); /* and finally writte it  in stdout*/
 
 	close(fd);
 	free(text); /* free the buffer */
