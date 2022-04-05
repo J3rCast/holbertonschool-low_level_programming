@@ -26,15 +26,16 @@ int main(int argc, char *argv[])
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
-	text = malloc(sizeof(char) * 1024);
-	oRet = open(argv[1], O_RDONLY | O_APEND);
+	text = malloc(sizeof(char) * 1024); /*set buffer*/
+	oRet = open(argv[1], O_RDONLY | O_APPEND); /*open first file*/
 	if (oRet < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		free(text);
 		exit(98);
 	}
-	rRet = read(oRet, text, 1024);
+	rRet = read(oRet, text, 1024); /*read first file*/
+	/*open the second file*/
 	oRet2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (oRet2 < 0)
 	{
