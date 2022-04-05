@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	text[letters] = '\0';
 
 	fd = write(1, text, letters); /* and finally writte it  in stdout*/
-	if (fd == -1 || fd != letters)
+	if (fd == -1)
 		return (0);
 
 	close(fd);
