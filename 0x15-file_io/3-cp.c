@@ -42,18 +42,20 @@ int main(int argc, char *argv[])
 	closeFd(oRet);
 	/*open the second file*/
 	oRet2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	wRet = write(oRet, text, rRet); /*write on the second file*/
-	if (oRet2 < 0 || wRet < 0)
+	if (oRet2 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		free(text);
 		exit(99);
 	}
-	/*if (wRet == -1 || oRet == -1 || rRet == -1)*/
-	/*{*/
-		/*free(text);*/
-		/*return (-1);*/
-	/*}*/
+	wRet = write(oRet, text, rRet); /*write on the second file*/
+	if (wRet < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		free(text);
+		closeFd(oRet2);
+		exit(99);
+	}
 	closeFd(oRet2);
 	free(text);
 	return (0);
