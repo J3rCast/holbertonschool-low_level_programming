@@ -35,7 +35,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	rRet = read(oRet, text, 1024);
-	closeFd(oRet);
 	oRet2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (oRet2 < 0)
 	{
@@ -45,12 +44,13 @@ int main(int argc, char *argv[])
 	}
 	wRet = write(oRet, text, rRet);
 	text[1024] = '\0';
-	closeFd(oRet2);
 	if (wRet == -1 || oRet == -1 || rRet == -1)
 	{
 		free(text);
 		return (-1);
 	}
+	closeFd(oRet2);
+	closeFd(oRet);
 	free(text);
 	return (0);
 }
