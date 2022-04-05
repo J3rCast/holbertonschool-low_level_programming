@@ -44,5 +44,5 @@ int main(int argc, char *argv[])
 	}
 	if (wRet == -1 || oRet == -1 || rRet == -1)
 		return (-1);
-	return (0);
+	return (1);
 }
