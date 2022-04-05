@@ -31,6 +31,11 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	text = malloc(sizeof(char) * 1024); /*set buffer*/
+	if (text == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(98);
+	}
 	oRet = open(argv[1], O_RDONLY); /*open first file*/
 	if (oRet < 0)
 	{
@@ -40,7 +45,6 @@ int main(int argc, char *argv[])
 	}
 	rRet = read(oRet, text, 1024); /*read first file*/
 	closeFd(oRet);
-	/*open the second file*/
 	oRet2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (oRet2 < 0)
 	{
@@ -53,7 +57,6 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		free(text);
-		closeFd(oRet2);
 		exit(99);
 	}
 	closeFd(oRet2);
