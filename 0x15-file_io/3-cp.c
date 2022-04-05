@@ -8,14 +8,13 @@
 int main(int argc, char *argv[])
 {
 	int oRet2 = 0, oRet = 0, rRet = 0, wRet = 0, cRet = 0, cRet2 = 0;
-	char text[1024];
+	char text[4080];
 
 	if (argc != 3)
 	{
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
-	/*opens the first file*/
 	oRet = open(argv[1], O_RDONLY);
 	if (oRet < 0)
 	{
@@ -24,7 +23,6 @@ int main(int argc, char *argv[])
 	}
 	rRet = read(oRet, text, 1024);
 	cRet = close(oRet);
-	/*create the other file if already exist then truncate*/
 	oRet2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (oRet2 < 0)
 	{
