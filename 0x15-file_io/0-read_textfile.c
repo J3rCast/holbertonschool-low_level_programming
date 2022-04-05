@@ -30,7 +30,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	close(fd);
 
-	write(1, text, letters); /* and finally writte it  in stdout*/
+	fd = write(1, text, letters); /* and finally writte it  in stdout*/
+	if (fd == -1)
+		return (0);
+	close(fd);
 
 	free(text); /* free the buffer */
 
