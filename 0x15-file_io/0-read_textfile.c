@@ -32,7 +32,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	close(fd);
 
 	wRet = write(1, text, letters); /* and finally writte it in stdout*/
-	if (wRet < 0)
+	if (wRet > letters)
 		return (0);
 
 	free(text); /* free the buffer */
