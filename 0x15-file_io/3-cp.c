@@ -1,4 +1,18 @@
 #include "main.h"
+void frees(int i, int j, char *buff);
+void closeFd(int fd);
+/**
+ * frees - this function close and frees
+ * @i: file descriptor
+ * @j: file descriptor
+ * @buff: buff to free
+ */
+void frees(int i, int j, char *buff)
+{
+	closeFd(i);
+	closeFd(j);
+	free(buff);
+}
 /**
  * closeFd - this function close file descriptors
  * @fd: file descriptor to close
@@ -6,7 +20,8 @@
 void closeFd(int fd)
 {
 	int i;
-i = close(fd);
+
+	i = close(fd);
 	if (i < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", i);
@@ -35,39 +50,32 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	
 	oRet2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (oRet2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	text = malloc(sizeof(char) * 1024); /*set buffer*/
+	text = malloc(sizeof(char) * 1024);
 	if (text == NULL)
-		return(0);
+		return (0);
 	while (rRet > 0)
 	{
 		rRet = read(oRet, text, 1024); /*read first file*/
 		if (rRet == -1)
 		{
-			closeFd(oRet);
-			closeFd(oRet2);
-			free(text);
+			frees(oRet, oRet2, text);
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(99);
 		}
 		wRet = write(oRet2, text, rRet); /*write on the second file*/
 		if (wRet == -1)
 		{
-			closeFd(oRet);
-			closeFd(oRet2);
-			free(text);
+			frees(oRet, oRet2, text);
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
-	closeFd(oRet);
-	closeFd(oRet2);
-	free(text);
+	frees(oRet, oRet2, text);
 	return (0);
 }

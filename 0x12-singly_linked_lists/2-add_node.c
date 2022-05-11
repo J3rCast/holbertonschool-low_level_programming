@@ -7,7 +7,7 @@
  */
 int _strlen(const char *s)
 {
-	char n;
+	char n = 'a';
 	int i;
 
 	for (i = 0; (n != '\0'); i++)

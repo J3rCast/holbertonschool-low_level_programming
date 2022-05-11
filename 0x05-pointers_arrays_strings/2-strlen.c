@@ -5,9 +5,9 @@
  *
  * Return: value
  */
-int _strlen(char *s)
+int _strlen(char const *s)
 {
-	char n;
+	char n = 'a';
 	int i;
 
 	for (i = 0; (n != '\0'); i++)
