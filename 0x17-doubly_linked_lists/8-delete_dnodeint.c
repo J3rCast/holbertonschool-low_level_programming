@@ -31,7 +31,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *temp = *head;
 	unsigned int len = linkedListLen(*head);
 
-	if (*head == NULL || index > len)
+	if (*head == NULL || index >= len)
 		return (-1);
 	if (len == 1)
 	{
@@ -39,14 +39,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(temp);
 		return (1);
 	}
+	for (len = 0; len != index; len++)
+		temp = temp->next;
 	if (len == index)
 	{
 		(temp->prev)->next = NULL;
 		free(temp);
 		return (1);
 	}
-	for (len = 0; len != index; len++)
-		temp = temp->next;
 	if (index == 0)
 	{
 		*head = temp->next;
