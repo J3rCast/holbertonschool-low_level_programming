@@ -1,10 +1,9 @@
 #include "lists.h"
 /**
- * get_dnodeint_at_index - get the index node
+ * sum_dlistint - sum every node data
  * @head: head of the list
- * @index: index to get
  *
- * Return: addres of the index node
+ * Return: the result of the sum
  */
 int sum_dlistint(dlistint_t *head)
 {
