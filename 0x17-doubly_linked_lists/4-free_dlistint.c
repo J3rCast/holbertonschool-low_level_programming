@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * free_dlistint - add a new node at the beggining of the list
+ * free_dlistint - frees a list
  * @head: head of the list
  */
 void free_dlistint(dlistint_t *head)

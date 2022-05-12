@@ -6,9 +6,14 @@
  *
  * Return: addres of the new element
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *newNode = NULL;
+	dlistint_t *temp = *h;
+	unsigned int observer = 0;
+
+	if (*h == NULL)
+		return (NULL);
 
 	newNode = (dlistint_t *)malloc(sizeof(dlistint_t));
 	if (newNode == NULL)
@@ -17,16 +22,16 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	newNode->prev = NULL;
 	newNode->next = NULL;
 
-	if (*head == NULL)
+	while (observer != idx - 1 && temp != NULL)
 	{
-		*head = newNode;
-		return (newNode);
+		temp = temp->next;
+		observer++;
 	}
-
-	(*head)->prev = newNode;
-	newNode->next = *head;
-	(*head) = newNode;
-
+	
+	newNode->next = temp->next;
+	newNode->prev = temp;
+	temp->next = newNode;
+	(newNode->next)->prev = newNode;
 
 	return (newNode);
 }

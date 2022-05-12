@@ -20,7 +20,7 @@ dlistint_t *create_node(const int n)
 	return (newNode);
 }
 /**
- * add_dnodeint - add a new node at the beggining of the list
+ * add_dnodeint_end - add a new node at the end of the list
  * @head: head of the list
  * @n: data of the new node
  *
