@@ -1,20 +1,33 @@
 #include "lists.h"
 /**
- * insert_dnodeint_at_index - insert a new node at index
- * @h: head of the list
- * @idx: index to insert the new node
- * @n: data of the new node
+ * linkedListLen - looks for lenght of a linked list
+ * @h: head of the linked list
  *
- * Return: addres of the new element
+ * Return: lenght of the list
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+unsigned int linkedListLen(dlistint_t *h)
+{
+	dlistint_t *temp = h;
+	unsigned int len = 0;
+
+	if (h == NULL)
+		return (0);
+	while (temp)
+	{
+		temp = temp->next;
+		len++;
+	}
+	return (len);
+}
+/**
+ * createNode - creates a new node
+ * @n: new node data
+ *
+ * Return: new node
+ */
+dlistint_t *createNode(int n)
 {
 	dlistint_t *newNode = NULL;
-	dlistint_t *temp = *h;
-	unsigned int observer = 0;
-
-	if (*h == NULL)
-		return (NULL);
 
 	newNode = (dlistint_t *)malloc(sizeof(dlistint_t));
 	if (newNode == NULL)
@@ -24,16 +37,56 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	newNode->prev = NULL;
 	newNode->next = NULL;
 
-	while (observer != idx - 1 && temp != NULL)
+	return (newNode);
+}
+/**
+ * insert_dnodeint_at_index - insert a new node at index
+ * @h: head of the list
+ * @idx: index to insert the new node
+ * @n: data of the new node
+ *
+ * Return: addres of the new element
+ */
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+{
+	dlistint_t *newNode = NULL, *temp = *h;
+	unsigned int listLen = linkedListLen(*h);
+
+	if (*h == NULL && idx == 0)
+	{
+		newNode->next = *h;
+		*h = newNode;
+		return (newNode);
+	}
+	else if (*h == NULL)
+		return (NULL);
+	if (idx > listLen)
+		return (NULL);
+	newNode = createNode(n);
+	if (idx == listLen)
+	{
+		while (temp->next)
+			temp = temp->next;
+		temp->next = newNode;
+		newNode->prev = temp;
+		return (newNode);
+	}
+	if (idx == 0)
+	{
+		newNode->next = *h;
+		*h = newNode;
+		return (newNode);
+	}
+	listLen = 0;
+	while (listLen != idx)
 	{
 		temp = temp->next;
-		observer++;
+		listLen++;
 	}
-
-	newNode->next = temp->next;
-	newNode->prev = temp;
-	temp->next = newNode;
-	(newNode->next)->prev = newNode;
+	newNode->next = temp;
+	newNode->prev = temp->prev;
+	(temp->prev)->next = newNode;
+	temp->prev = newNode;
 
 	return (newNode);
 }
