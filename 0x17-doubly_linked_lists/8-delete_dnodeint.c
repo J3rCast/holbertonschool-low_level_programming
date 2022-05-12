@@ -31,10 +31,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *temp;
 	unsigned int len = 0;
 
-	if (head == NULL || *head == NULL || index >= len)
+	if (head == NULL || *head == NULL)
 		return (-1);
 	len = linkedListLen(*head);
 	temp = *head;
+	if (index >= len)
+		return (-1);
 	if (len == 1)
 	{
 		*head = NULL;
