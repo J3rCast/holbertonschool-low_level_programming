@@ -52,14 +52,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *newNode = NULL, *temp = *h;
 	unsigned int listLen = linkedListLen(*h);
 
-	if (*h == NULL && idx == 0)
+	if (idx == 0)
 	{
-		newNode = createNode(n);
-		*h = newNode;
-		return (newNode);
+		temp = add_dnodeint(h, n);
+		return (temp);
 	}
-	/* else if (*h == NULL) */
-		/* return (NULL); */
 	if (idx > listLen)
 		return (NULL);
 	newNode = createNode(n);
@@ -69,12 +66,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			temp = temp->next;
 		temp->next = newNode;
 		newNode->prev = temp;
-		return (newNode);
-	}
-	if (idx == 0)
-	{
-		newNode->next = *h;
-		*h = newNode;
 		return (newNode);
 	}
 	listLen = 0;
