@@ -28,11 +28,13 @@ unsigned int linkedListLen(dlistint_t *h)
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp = *head;
-	unsigned int len = linkedListLen(*head);
+	dlistint_t *temp;
+	unsigned int len = 0;
 
-	if (*head == NULL || index >= len)
+	if (head == NULL || *head == NULL || index >= len)
 		return (-1);
+	len = linkedListLen(*head);
+	temp = *head;
 	if (len == 1)
 	{
 		*head = NULL;
