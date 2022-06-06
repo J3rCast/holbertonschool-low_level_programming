@@ -6,12 +6,14 @@ hash_node_t *htItem(const char *key, const char *value)
 	newItem = malloc(sizeof(hash_node_t));
 	if (newItem == NULL)
 		return (NULL);
+
 	newItem->key = malloc(strlen(key) + 1);
 	if (newItem->key == NULL)
 	{
 		free(newItem);
 		return (NULL);
 	}
+
 	newItem->value = malloc(strlen(value) + 1);
 	if (newItem->value == NULL)
 	{
@@ -19,6 +21,7 @@ hash_node_t *htItem(const char *key, const char *value)
 		free(newItem->key);
 		return (NULL);
 	}
+	
 	strcpy(newItem->key, key);
 	strcpy(newItem->value, value);
 	
