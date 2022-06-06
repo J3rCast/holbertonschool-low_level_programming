@@ -22,7 +22,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free (newT);
 		return (NULL);
 	}
-	
+
 	newT->size = size;
 	for (i = 0; i < size; i++)
 		newT->array[i] = NULL;
