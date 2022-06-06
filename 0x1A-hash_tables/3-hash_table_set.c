@@ -1,5 +1,41 @@
 #include "hash_tables.h"
 /**
+ * _strdup - returns a pointer to a newly space in memory
+ *
+ * @str: string
+ *
+ * Return: char
+ */
+
+char *_strdup(const char *str)
+{
+	char *x;
+	char n = 'a';
+	int i;
+	int l;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	for (l = 0; n; l++)
+	{
+		n = str[l];
+	}
+
+	x = malloc(sizeof(char *) * l);
+
+	if (x == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < l; i++)
+	{
+		x[i] = str[i];
+	}
+	return (x);
+}
+/**
  * htItem - creates a new item
  *
  * @key: key of the item
@@ -14,18 +50,18 @@ hash_node_t *htItem(const char *key, const char *value)
 	if (!key || strcmp(key, "") == 0 || !*key)
 		return (NULL);
 
-	newItem = malloc(sizeof(hash_node_t));
+	newItem = (hash_node_t *)calloc(1, sizeof(hash_node_t) + 1);
 	if (newItem == NULL)
 		return (NULL);
 
-	newItem->key = strdup(key);
+	newItem->key = _strdup(key);
 	if (newItem->key == NULL)
 	{
 		free(newItem);
 		return (NULL);
 	}
 
-	newItem->value = strdup(value);
+	newItem->value = _strdup(value);
 	if (newItem->value == NULL)
 	{
 		free(newItem->key);
@@ -62,7 +98,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(item->value);
 			free(item);
 			free(ht->array[idx]->value);
-			current_idx->value = strdup(value);
+			current_idx->value = _strdup(value);
 			return (1);
 		}
 		current_idx = ht->array[idx]->next;
