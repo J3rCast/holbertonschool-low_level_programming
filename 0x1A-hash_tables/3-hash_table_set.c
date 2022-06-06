@@ -19,8 +19,8 @@ hash_node_t *htItem(const char *key, const char *value)
 		free(newItem->key);
 		return (NULL);
 	}
-	newItem->key = (char *)key;
-	newItem->value = (char *)value;
+	strcpy(newItem->key, key);
+	strcpy(newItem->value, value);
 	
 	return (newItem);
 }
