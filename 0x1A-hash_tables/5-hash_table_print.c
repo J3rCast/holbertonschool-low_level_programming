@@ -1,16 +1,19 @@
 #include "hash_tables.h"
 /**
- * hash_table_get - get the value of an index
+ * hash_table_print - print the hash table
  *
  * @ht: hash table
- * @key: key of the value that we need
- *
- * Return: value
  */
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i = 0, count = 0;
 	hash_node_t *temp = NULL;
+
+	if (!ht)
+	{
+		printf("{}\n");
+		return;
+	}
 
 	printf("{");
 	for (i = 0; i < ht->size; i++)
