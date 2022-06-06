@@ -51,7 +51,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *item = htItem(key, value);
 	hash_node_t *current_idx = ht->array[idx];
 
-	if (item == NULL)
+	if (item == NULL || !ht || !*key)
 		return (0);
 
 	while (current_idx)
