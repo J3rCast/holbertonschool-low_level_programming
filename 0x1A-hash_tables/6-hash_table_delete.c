@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 /**
  * free_list - frees a list
- * 
+ *
  * @node: first node of the index
  */
 void delete_list(hash_node_t *node)
@@ -18,7 +18,7 @@ void delete_list(hash_node_t *node)
 
 /**
  * hash_table_delete - deletes a hash table
- * 
+ *
  * @ht: Hash table to delete
  */
 void hash_table_delete(hash_table_t *ht)

@@ -23,7 +23,7 @@ char *_strdup(const char *str)
 		n = str[l];
 	}
 
-	x = malloc(sizeof(char *) * l);
+	x = malloc(sizeof(char) * l);
 
 	if (x == NULL)
 	{
@@ -87,7 +87,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *item = htItem(key, value);
 	hash_node_t *current_idx = ht->array[idx];
 
-	if (item == NULL || !ht || !*key || value == NULL)
+	if (item == NULL || !ht || !*key || value == NULL || !key)
 		return (0);
 
 	while (current_idx)
@@ -97,7 +97,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(item->key);
 			free(item->value);
 			free(item);
-			free(ht->array[idx]->value);
+			free(current_idx->value);
 			current_idx->value = _strdup(value);
 			return (1);
 		}
