@@ -18,23 +18,20 @@ hash_node_t *htItem(const char *key, const char *value)
 	if (newItem == NULL)
 		return (NULL);
 
-	newItem->key = malloc(strlen(key) + 1);
+	newItem->key = strdupkey;
 	if (newItem->key == NULL)
 	{
 		free(newItem);
 		return (NULL);
 	}
 
-	newItem->value = malloc(strlen(value) + 1);
+	newItem->value = value;
 	if (newItem->value == NULL)
 	{
 		free(newItem);
 		free(newItem->key);
 		return (NULL);
 	}
-
-	strcpy(newItem->key, key);
-	strcpy(newItem->value, value);
 
 	return (newItem);
 }
