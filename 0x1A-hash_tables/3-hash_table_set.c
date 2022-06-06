@@ -4,6 +4,21 @@ hash_node_t *htItem(const char *key, const char *value)
 	hash_node_t *newItem = NULL;
 
 	newItem = malloc(sizeof(hash_node_t));
+	if (newItem == NULL)
+		return (NULL);
+	newItem->key = malloc(strlen(key) + 1);
+	if (newItem->key == NULL)
+	{
+		free(newItem);
+		return (NULL);
+	}
+	newItem->value = malloc(strlen(value) + 1);
+	if (newItem->value == NULL)
+	{
+		free(newItem);
+		free(newItem->key);
+		return (NULL);
+	}
 	newItem->key = (char *)key;
 	newItem->value = (char *)value;
 	
