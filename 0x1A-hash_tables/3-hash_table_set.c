@@ -28,8 +28,8 @@ hash_node_t *htItem(const char *key, const char *value)
 	newItem->value = strdup(value);
 	if (newItem->value == NULL)
 	{
-		free(newItem);
 		free(newItem->key);
+		free(newItem);
 		return (NULL);
 	}
 
