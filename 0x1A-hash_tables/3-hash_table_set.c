@@ -18,14 +18,14 @@ hash_node_t *htItem(const char *key, const char *value)
 	if (newItem == NULL)
 		return (NULL);
 
-	newItem->key = strdupkey;
+	newItem->key = strdup(key);
 	if (newItem->key == NULL)
 	{
 		free(newItem);
 		return (NULL);
 	}
 
-	newItem->value = value;
+	newItem->value = strdup(value);
 	if (newItem->value == NULL)
 	{
 		free(newItem);
