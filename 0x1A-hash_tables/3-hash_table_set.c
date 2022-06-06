@@ -21,7 +21,7 @@ hash_node_t *htItem(const char *key, const char *value)
 		free(newItem->key);
 		return (NULL);
 	}
-	
+
 	strcpy(newItem->key, key);
 	strcpy(newItem->value, value);
 	
@@ -52,9 +52,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-	    item->next = current_idx;
-		current_idx = item;
-	}
+        item->next = ht->array[idx];
+        ht->array[idx] = item;
+    }
 
 	return (1);
 }
