@@ -51,12 +51,27 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *item = htItem(key, value);
 	hash_node_t *current_idx = ht->array[idx];
 
-	if (item == NULL || !ht || value == NULL)
+	if (item == NULL)
 		return (0);
 
-	if (current_idx == NULL)
+	while (current_idx)
+	{
+		if (strcmp(current_idx->key, key) == 0)
+		{
+			free(item->key);
+			free(item->value);
+			free(item);
+			free(ht->array[idx]->value);
+			current_idx->value = strdup(value);
+			return (1);
+		}
+		current_idx = ht->array[idx]->next;
+	}
+
+	if (ht->array[idx] == NULL)
 	{
 		ht->array[idx] = item;
+		ht->array[idx]->next = NULL;
 	}
 	else
 	{
