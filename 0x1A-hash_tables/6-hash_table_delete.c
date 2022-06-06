@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * free_list - frees a list
+ * delete_list - frees a list
  *
  * @node: first node of the index
  */
