@@ -68,16 +68,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		current_idx = ht->array[idx]->next;
 	}
 
-	if (ht->array[idx] == NULL)
-	{
-		ht->array[idx] = item;
-		ht->array[idx]->next = NULL;
-	}
-	else
-	{
-		item->next = ht->array[idx];
-		ht->array[idx] = item;
-	}
+	item->next = ht->array[idx];
+	ht->array[idx] = item;
 
 	return (1);
 }
