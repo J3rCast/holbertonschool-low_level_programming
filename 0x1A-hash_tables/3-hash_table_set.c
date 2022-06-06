@@ -11,7 +11,7 @@ hash_node_t *htItem(const char *key, const char *value)
 {
 	hash_node_t *newItem = NULL;
 
-	if (!key || strcmp(key, "") == 0)
+	if (!key || strcmp(key, "") == 0 || !*key)
 		return (NULL);
 
 	newItem = malloc(sizeof(hash_node_t));
