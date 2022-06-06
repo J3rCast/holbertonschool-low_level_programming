@@ -20,6 +20,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 	newT->array = calloc(size, sizeof(hash_node_t *));
 	for (i = 0; i < size; i++)
 		newT->array[i] = NULL;
-	
+
 	return (newT);
 }
