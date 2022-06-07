@@ -6,7 +6,6 @@
  *
  * Return: char
  */
-
 char *_strdup(const char *str)
 {
 	char *x;
@@ -83,12 +82,15 @@ hash_node_t *htItem(const char *key, const char *value)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int idx = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *item = htItem(key, value);
-	hash_node_t *current_idx = ht->array[idx];
+	unsigned long int idx = 0;
+	hash_node_t *current_idx = NULL;
 
 	if (item == NULL || !ht || !*key || value == NULL || !key)
 		return (0);
+
+	current_idx = ht->array[idx];
+	idx = key_index((const unsigned char *)key, ht->size);
 
 	while (current_idx)
 	{
