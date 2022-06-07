@@ -89,8 +89,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (item == NULL || !ht || !*key || value == NULL || !key)
 		return (0);
 
-	current_idx = ht->array[idx];
 	idx = key_index((const unsigned char *)key, ht->size);
+	current_idx = ht->array[idx];
 
 	while (current_idx)
 	{
