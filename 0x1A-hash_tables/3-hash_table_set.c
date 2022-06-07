@@ -24,11 +24,11 @@ char *_strdup(const char *str)
 	}
 
 	x = malloc(sizeof(char) * l);
+	if (x == NULL)
+		return (NULL);
 
 	if (x == NULL)
-	{
 		return (NULL);
-	}
 	for (i = 0; i < l; i++)
 	{
 		x[i] = str[i];
