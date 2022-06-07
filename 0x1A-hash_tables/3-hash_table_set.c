@@ -50,7 +50,7 @@ hash_node_t *htItem(const char *key, const char *value)
 	if (!key || strcmp(key, "") == 0 || !*key)
 		return (NULL);
 
-	newItem = (hash_node_t *)calloc(1, sizeof(hash_node_t) + 1);
+	newItem = (hash_node_t *)malloc(sizeof(hash_node_t) + 1);
 	if (newItem == NULL)
 		return (NULL);
 
