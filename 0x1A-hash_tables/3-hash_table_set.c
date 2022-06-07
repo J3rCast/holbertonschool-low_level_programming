@@ -101,7 +101,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			current_idx->value = _strdup(value);
 			return (1);
 		}
-		current_idx = ht->array[idx]->next;
+		current_idx = current_idx->next;
 	}
 
 	item->next = ht->array[idx];
