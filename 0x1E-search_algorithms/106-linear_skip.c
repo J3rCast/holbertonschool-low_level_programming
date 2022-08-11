@@ -2,7 +2,7 @@
 /**
  * skip_list_size - look for the size of a skiplist
  *
- * @list - pointer to the head of the skiplist
+ * @list: pointer to the head of the skiplist
  *
  * Return: size of the skiplist
  */
