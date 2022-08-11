@@ -41,7 +41,6 @@ int advanced_binary_recursive(int *array, size_t lo, size_t hi, int value)
 
 	return (-1);
 }
-
 /**
  * advanced_binary - searches for a value in an array of
  * integers using the binary search algorithm.
@@ -55,5 +54,6 @@ int advanced_binary_recursive(int *array, size_t lo, size_t hi, int value)
 int advanced_binary(int *array, size_t size, int value)
 {
 	int lo = 0, hi = size - 1;
+
 	return (advanced_binary_recursive(array, lo, hi, value));
 }
