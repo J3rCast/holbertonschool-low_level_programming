@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * advance - advance steps on the linked list 
+ * advance - advance steps on the linked list
  *
  * @list: pointer to the head of the list
  * @steps: steps to advance
