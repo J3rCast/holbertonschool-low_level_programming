@@ -48,5 +48,8 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	int lo = 0, hi = size - 1;
 
+	if (array == NULL)
+		return (-1);
+
 	return (advanced_binary_recursive(array, lo, hi, value));
 }
